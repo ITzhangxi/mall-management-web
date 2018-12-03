@@ -5,17 +5,17 @@
                 <h1 class="title">sign in with your organizational account</h1>
                 <el-form ref="form" :model="formData" class="login-form" :rules="rules">
                     <el-form-item prop="username">
-                        <el-input v-model="formData.username" placeholder="请输入用户名">
+                        <el-input v-model="formData.username" placeholder="请输入用户名" @keyup.enter.native="submit">
                             <i slot="prefix" class="iconfont icon-yonghuming"></i>
                         </el-input>
                     </el-form-item>
                     <el-form-item prop="password">
-                        <el-input v-model="formData.password" placeholder="请输入密码">
+                        <el-input v-model="formData.password" placeholder="请输入密码" @keyup.enter.native="submit">
                             <i slot="prefix" class="iconfont icon-mima"></i></el-input>
                     </el-form-item>
                     <el-form-item prop="captcha">
                         <div class="captcha">
-                            <el-input v-model="formData.captcha" placeholder="请输入验证码">
+                            <el-input v-model="formData.captcha" placeholder="请输入验证码" @keyup.enter.native="submit">
                                 <i slot="prefix" class="iconfont icon-yanzhengma"></i></el-input>
                             <img @click="getCaptcha" style="width:110px;cursor: pointer;" v-show="captchaUrl"
                                  :src="captchaUrl" alt="验证码">
