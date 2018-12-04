@@ -4,13 +4,13 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
+    state: {
+        collapse: true,
+    },
+    mutations: {
+        upDateCollapse(state, collapse) {
+            state.collapse = collapse
+        },
+    },
+    actions: {},
 });

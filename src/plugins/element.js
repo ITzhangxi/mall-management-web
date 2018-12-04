@@ -6,10 +6,10 @@ import {
     // Dropdown,
     // DropdownMenu,
     // DropdownItem,
-    // Menu,
-    // Submenu,
-    // MenuItem,
-    // MenuItemGroup,
+    Menu,
+    Submenu,
+    MenuItem,
+    MenuItemGroup,
     Input,
     // InputNumber,
     // Radio,
@@ -30,7 +30,7 @@ import {
     // TimeSelect,
     // TimePicker,
     // Popover,
-    // Tooltip,
+    Tooltip,
     // Breadcrumb,
     // BreadcrumbItem,
     Form,
@@ -75,10 +75,10 @@ import {
 // Vue.use(Dropdown);
 // Vue.use(DropdownMenu);
 // Vue.use(DropdownItem);
-// Vue.use(Menu);
-// Vue.use(Submenu);
-// Vue.use(MenuItem);
-// Vue.use(MenuItemGroup);
+Vue.use(Menu);
+Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);
 Vue.use(Input);
 // Vue.use(InputNumber);
 // Vue.use(Radio);
@@ -99,7 +99,7 @@ Vue.use(Button);
 // Vue.use(TimeSelect);
 // Vue.use(TimePicker);
 // Vue.use(Popover);
-// Vue.use(Tooltip);
+Vue.use(Tooltip);
 // Vue.use(Breadcrumb);
 // Vue.use(BreadcrumbItem);
 Vue.use(Form);

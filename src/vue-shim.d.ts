@@ -1,9 +1,18 @@
-import Vue from 'vue';
-import {Message as ElMessage} from 'element-ui'
-// 声明全局方法
+import Vue from 'vue'
+
 declare module 'vue/types/vue' {
     interface Vue {
         axios: any;
-        // $message: ElMessage;
+    }
+}
+
+// declare module 'vue/types/vue' {
+//     interface Vue {
+//         $nextTick: any;
+//     }
+// }
+declare module 'vue/types/vue' {
+    interface Vue {
+        $message: any;
     }
 }

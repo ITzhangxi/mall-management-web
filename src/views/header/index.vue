@@ -1,0 +1,51 @@
+<template>
+    <div class="global-container header">
+        <div class="btn-collapse" @click="collapseBtn">
+            <i class="iconfont icon-menu-kaiguan" :class="{'close':collapse}"></i>
+        </div>
+    </div>
+</template>
+
+<script lang="ts">
+    import {Component, Vue} from 'vue-property-decorator';
+    import {State, Mutation} from 'vuex-class'
+
+    @Component({
+        components: {},
+    })
+    export default class Header extends Vue {
+        @State collapse
+        @Mutation upDateCollapse
+
+        collapseBtn(): void {
+            this.upDateCollapse(!this.collapse)
+        }
+
+    }
+</script>
+<style lang="scss">
+    .header {
+        height: 6rem;
+        background-color: #2c2c2c;
+        color: #ffffff;
+        font-size: 2rem;
+        .btn-collapse {
+            height: 100%;
+            width: 4.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background-color: #3d3d3d;
+            }
+            .icon-menu-kaiguan {
+                transform: rotate(0deg);
+                transition: transform 0.4s;
+                &.close {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+</style>
