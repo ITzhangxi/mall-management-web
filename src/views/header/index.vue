@@ -8,17 +8,17 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import {State, Mutation} from 'vuex-class'
+    import {State, Mutation} from 'vuex-class';
 
     @Component({
         components: {},
     })
     export default class Header extends Vue {
-        @State collapse
-        @Mutation upDateCollapse
+        @State public collapse !: boolean;
+        @Mutation public upDateCollapse !: (collapse: boolean) => void;
 
-        collapseBtn(): void {
-            this.upDateCollapse(!this.collapse)
+        public collapseBtn(): void {
+            this.upDateCollapse(!this.collapse);
         }
 
     }

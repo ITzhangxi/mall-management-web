@@ -12,20 +12,20 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
-    import LayoutHeader from '../header/index.vue'
-    import LayoutMenu from '../menu/index.vue'
-    import {State} from 'vuex-class'
+import {Component, Vue} from 'vue-property-decorator';
+import LayoutHeader from '../header/index.vue'
+import LayoutMenu from '../menu/index.vue'
+import {State} from 'vuex-class'
 
-    @Component({
-        components: {
-            LayoutHeader,
-            LayoutMenu,
-        },
-    })
-    export default class Index extends Vue {
-        @State collapse
-    }
+@Component({
+    components: {
+        LayoutHeader,
+        LayoutMenu,
+    },
+})
+export default class Index extends Vue {
+    @State public collapse !: boolean;
+}
 </script>
 <style lang="scss">
     #layout {
