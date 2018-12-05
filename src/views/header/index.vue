@@ -3,12 +3,22 @@
         <div class="btn-collapse" @click="collapseBtn">
             <i class="iconfont icon-menu-kaiguan" :class="{'close':collapse}"></i>
         </div>
+        <el-dropdown>
+            <span class="el-dropdown-link">
+                张喜
+                <i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>个人中心</el-dropdown-item>
+                <el-dropdown-item>退出</el-dropdown-item>
+            </el-dropdown-menu>
+        </el-dropdown>
     </div>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
-    import {State, Mutation} from 'vuex-class';
+    import {Component, Vue} from "vue-property-decorator";
+    import {State, Mutation} from "vuex-class";
 
     @Component({
         components: {},
@@ -25,10 +35,14 @@
 </script>
 <style lang="scss">
     .header {
-        height: 6rem;
+        height: 5rem;
         background-color: #2c2c2c;
         color: #ffffff;
         font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1rem;
         .btn-collapse {
             height: 100%;
             width: 4.5rem;

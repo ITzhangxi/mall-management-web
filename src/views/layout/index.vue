@@ -1,7 +1,12 @@
 <template>
     <div class="global-container" id="layout">
         <div class="layout-left" :class="{'close':collapse}">
-            <div class="logo">后台管理</div>
+            <div class="logo">
+                <span>后台管理</span>
+                <!--<transition name="fade" v-if="!collapse">-->
+                    <!--<span v-if="!collapse">管理</span>-->
+                <!--</transition>-->
+            </div>
             <layout-menu></layout-menu>
         </div>
         <div class="layout-right">
@@ -12,20 +17,20 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator';
-import LayoutHeader from '../header/index.vue'
-import LayoutMenu from '../menu/index.vue'
-import {State} from 'vuex-class'
+    import {Component, Vue} from "vue-property-decorator";
+    import LayoutHeader from "../header/index.vue";
+    import LayoutMenu from "../menu/index.vue";
+    import {State} from "vuex-class";
 
-@Component({
-    components: {
-        LayoutHeader,
-        LayoutMenu,
-    },
-})
-export default class Index extends Vue {
-    @State public collapse !: boolean;
-}
+    @Component({
+        components: {
+            LayoutHeader,
+            LayoutMenu,
+        },
+    })
+    export default class Index extends Vue {
+        @State public collapse !: boolean;
+    }
 </script>
 <style lang="scss">
     #layout {
@@ -44,13 +49,19 @@ export default class Index extends Vue {
                 width: 5.4rem;
             }
             .logo {
-                height: 6rem;
+                height: 5rem;
                 background-color: #2c2c2c;
                 color: #ffffff;
                 font-size: 2rem;
                 display: flex;
                 align-items: center;
                 padding-left: 1rem;
+                .fade-enter-active, .fade-leave-active {
+                    transition: opacity .5s;
+                }
+                .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+                    opacity: 0;
+                }
             }
         }
         .layout-right {
@@ -58,7 +69,7 @@ export default class Index extends Vue {
             position: relative;
             .layout-content {
                 position: absolute;
-                top: 6rem;
+                top: 5rem;
                 right: 0;
                 bottom: 0;
                 left: 0;
