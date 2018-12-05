@@ -1,16 +1,19 @@
-.el-input__inner, .el-button { // 去除圆角
-  border-radius: 0 !important;
-}
+@import "./form";
 
-.el-form-item {
-  // 缩小from表单每个模块margin-bottom
-  margin-bottom: 1.8rem;
-}
 
 // 菜单
 .el-menu {
   border-right: none !important;
+
+  i, span {
+    color: #fff !important;
+  }
+
   .el-menu-item:focus, .el-menu-item:hover, .el-submenu__title:focus, .el-submenu__title:hover {
+    background-color: #3d3d3d !important;
+  }
+
+  li.is-active.el-menu-item {
     background-color: #3d3d3d !important;
   }
 }

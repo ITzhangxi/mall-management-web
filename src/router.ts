@@ -12,6 +12,13 @@ export default new Router({
             path: '/',
             name: 'layout',
             component: () => import('./views/layout/index.vue'),
+            children: [
+                {
+                    path: '/setMenu',
+                    name: 'setMenu',
+                    component: () => import('./views/setMenu/index.vue'),
+                },
+            ],
         },
         {
             path: '/login',

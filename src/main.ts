@@ -5,7 +5,9 @@ import '@/common/scss/index.scss';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
+import './components'
 import './plugins/element.js';
+
 Vue.config.productionTip = false;
 
 new Vue({

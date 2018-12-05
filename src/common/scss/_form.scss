@@ -1,0 +1,12 @@
+.el-select { //选择框width100%
+  width: 100%;
+}
+
+.el-input__inner, .el-button { // 去除圆角
+  border-radius: 0 !important;
+}
+
+.el-form-item {
+  // 缩小from表单每个模块margin-bottom
+  margin-bottom: 1.8rem;
+}

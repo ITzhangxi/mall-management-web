@@ -1,24 +1,24 @@
 <template>
     <div class="global-container">
         <el-menu
-                default-active="2"
+                :default-active="defaultActive"
                 class="el-menu-vertical-demo"
                 background-color="#373737"
                 text-color="#fff"
                 active-text-color="#fff"
-                :collapse="collapse">
-            <el-menu-item index="2">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航二</span>
-            </el-menu-item>
-            <el-menu-item index="3" disabled>
-                <i class="el-icon-document"></i>
-                <span slot="title">导航三</span>
-            </el-menu-item>
-            <el-menu-item index="4">
-                <i class="el-icon-setting"></i>
-                <span slot="title">导航四</span>
-            </el-menu-item>
+                :collapse="collapse"
+                :collapse-transition="false"
+                router>
+            <el-submenu index="/">
+                <template slot="title">
+                    <i class="el-icon-setting"></i>
+                    <span>设置</span>
+                </template>
+                <el-menu-item index="/setMenu">
+                    <i class="el-icon-menu"></i>
+                    <span>菜单</span>
+                </el-menu-item>
+            </el-submenu>
         </el-menu>
     </div>
 </template>
@@ -32,7 +32,14 @@
     })
     export default class Menu extends Vue {
         @State public collapse !: boolean;
-    }
+
+        private defaultActive: string = ''
+
+        private mounted() {
+            // 根据浏览器地址 默认菜单激活菜单
+            this.defaultActive = this.$route.path
+        }
+    };
 </script>
 <style lang="scss">
 </style>

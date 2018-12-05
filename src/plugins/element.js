@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {
     // Pagination,
-    // Dialog,
+    Dialog,
     // Autocomplete,
     Dropdown,
     DropdownMenu,
@@ -19,8 +19,8 @@ import {
     // CheckboxButton,
     // CheckboxGroup,
     // Switch,
-    // Select,
-    // Option,
+    Select,
+    Option,
     // OptionGroup,
     Button,
     // ButtonGroup,
@@ -42,8 +42,8 @@ import {
     // Alert,
     // Slider,
     // Icon,
-    // Row,
-    // Col,
+    Row,
+    Col,
     // Upload,
     // Progress,
     // Badge,
@@ -70,7 +70,7 @@ import {
 } from 'element-ui';
 
 // Vue.use(Pagination);
-// Vue.use(Dialog);
+Vue.use(Dialog);
 // Vue.use(Autocomplete);
 Vue.use(Dropdown);
 Vue.use(DropdownMenu);
@@ -88,8 +88,8 @@ Vue.use(Input);
 // Vue.use(CheckboxButton);
 // Vue.use(CheckboxGroup);
 // Vue.use(Switch);
-// Vue.use(Select);
-// Vue.use(Option);
+Vue.use(Select);
+Vue.use(Option);
 // Vue.use(OptionGroup);
 Vue.use(Button);
 // Vue.use(ButtonGroup);
@@ -111,8 +111,8 @@ Vue.use(FormItem);
 // Vue.use(Alert);
 // Vue.use(Slider);
 // Vue.use(Icon);
-// Vue.use(Row);
-// Vue.use(Col);
+Vue.use(Row);
+Vue.use(Col);
 // Vue.use(Upload);
 // Vue.use(Progress);
 // Vue.use(Badge);
