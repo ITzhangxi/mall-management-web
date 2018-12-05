@@ -17,21 +17,21 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from "vue-property-decorator";
-    import {State, Mutation} from "vuex-class";
+import {Component, Vue} from 'vue-property-decorator';
+import {State, Mutation} from 'vuex-class';
 
-    @Component({
-        components: {},
-    })
-    export default class Header extends Vue {
-        @State public collapse !: boolean;
-        @Mutation public upDateCollapse !: (collapse: boolean) => void;
+@Component({
+    components: {},
+})
+export default class Header extends Vue {
+    @State public collapse !: boolean;
+    @Mutation public upDateCollapse !: (collapse: boolean) => void;
 
-        public collapseBtn(): void {
-            this.upDateCollapse(!this.collapse);
-        }
-
+    public collapseBtn(): void {
+        this.upDateCollapse(!this.collapse);
     }
+
+}
 </script>
 <style lang="scss">
     .header {
